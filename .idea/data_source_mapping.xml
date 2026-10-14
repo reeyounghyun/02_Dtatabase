@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/00_Setup/01_Create_User.sql" value="bb0ab862-9e33-4fd6-b4f7-a44a4089a01e" />
+    <file url="file://$PROJECT_DIR$/00_Setup/02_Create_tables_menudb.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/01_Select.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/02_Order_By.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/03_Where.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/04_Distinch.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/05_Limt.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
+    <file url="file://$PROJECT_DIR$/01_DQL/06_Built_In_Function.sql" value="f9b933b3-0bc5-4d32-8c14-60b2533f7824" />
   </component>
 </project>
