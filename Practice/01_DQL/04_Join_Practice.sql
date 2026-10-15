@@ -67,7 +67,23 @@ where a.bonus is not null;
 (힌트: 여러 테이블 JOIN, IN)
 */
 
-
+select
+    e.emp_name,
+    d.dept_title,
+    l.local_code,
+    n.national_name
+from tbl_employee e
+join tbl_department d
+on e.dept_code = d.dept_id
+join tbl_location l
+on d.location_id = l.local_code
+join tbl_national n
+on l.national_code = n.national_code
+where n.national_code in ('KO', 'JP')
+ORDER BY
+    N.national_code,
+    d.dept_id,
+    e.emp_id;
 
 /* Q5)
 모든 직원의 사번, 사원명, 관리자명을 조회하시오.
@@ -78,3 +94,12 @@ where a.bonus is not null;
 - 같은 tbl_employee 테이블을 서로 다른 별칭으로 두 번 사용한다.
 (힌트: SELF JOIN, LEFT JOIN)
 */
+
+select
+    e.emp_id,
+    e.emp_name,
+    m.emp_name as 관리자명
+from tbl_employee e -- 직원 정보를 조회하는 역활 -> e
+left join  tbl_employee m -- 관리자 정보를 조회하는 역활 -> m
+on e.manager_id = m.emp_id -- 직원의 관리자사번과 관리자의 사번을 비교
+order by  e.emp_id -- 직원 사번 기준 오름차순
