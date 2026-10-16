@@ -108,18 +108,84 @@ create table if not exists tb3
     fk   int          null,
     col1 varchar(255) null,
     check ( col1 in ('Y', 'N') )
-)
+);
     comment '삭제할 tb3입니다.';
 
+create table if not exists tb3
+(
+    pk   int auto_increment
+        primary key,
+    fk   int          null,
+    col1 varchar(255) null,
+    check ( col1 in ('Y', 'N') )
+);
+
+create table if not exists tb3
+(
+    pk   int auto_increment
+        primary key,
+    fk   int          null,
+    col1 varchar(255) null,
+    check ( col1 in ('Y', 'N') )
+);
+
+create table if not exists tb4
+(
+    pk   int auto_increment
+        primary key,
+    fk   int          null,
+    col1 varchar(255) null,
+    check ( col1 in ('Y', 'N') )
+);
+
+create table if not exists tb5
+(
+    pk   int auto_increment
+        primary key,
+    fk   int          null,
+    col1 varchar(255) null,
+    check ( col1 in ('Y', 'N') )
+);
+
+-- 테이블 삭제
+drop table if exists tb3, tb4, tb5;
 
 
+-- Truncate
+-- 테이블 구조는 유지하면서 모든 행(데이터)는 전부 삭제한다.
+-- Auto_Increment의 값도 초기화 된다.
 
 
+create table if not exists tb3
+(
+    pk   int auto_increment
+        primary key,
+    fk   int          null,
+    col1 varchar(255) null,
+    check ( col1 in ('Y', 'N') )
+);
 
+insert into tb3 (fk, col1)
+values
+    (10, 'y'),
+    (20, 'y'),
+    (30, 'y'),
+    (40, 'y'),
+    (50, 'y');
 
+select * from tb3;
 
+delete from tb3
+where pk = 5;
 
+insert into  tb3 (fk, col1)
+values (50, 'Y');
 
+truncate table tb3;
+
+-- delete: 선택한 행 삭제 하기 위해 사용 /
+-- truncate - 테이블구조를 초기화해 행을 삭제하기 위해 사용 /
+-- reop - 모든 행과 구조 삭제
 
 
 
