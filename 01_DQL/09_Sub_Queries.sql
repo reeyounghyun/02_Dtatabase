@@ -29,7 +29,7 @@ select a.menu_code,
        (select b.category_name
         from tbl_category b
         where b.category_code = a.category_code) as category_name
-from tbl_menu a
+from tbl_menu a;
 
 
 # 2. FROM 절
@@ -74,7 +74,15 @@ having avg(menu_price) > (select avg(menu_price) -- 전체 메뉴의 평균 가�
 
 
 #  [조건] 카테고리별로 편균 가격보다 높은 가격의 메뉴 조회
-
+select menu_code,
+        menu_name,
+       menu_price,
+       category_code,
+       orderable_status
+from tbl_menu a
+where menu_price > (select avg(menu_price)
+                    from tbl_menu
+                    where category_code = a.category_code)
 
 -- EXISTS()
 -- 서브쿼리의 조회 결과가 있으면 true
