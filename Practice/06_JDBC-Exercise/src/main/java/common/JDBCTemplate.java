@@ -1,6 +1,5 @@
-package lecture.section2.common;
+package common;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
@@ -18,15 +17,13 @@ public class JDBCTemplate {
             // 파일을 읽어오는것!
             // properties.load() : 읽어온 파일을 key value로 분리해서저장
             prop.load(new FileReader(
-                    "src/main/java/lecture/section2/comfig/db.properties"));
-
-
-            System.out.println("설정 파일을 읽어왔습니다...");
+                    "src/main/java/config/db.properties"));
 
             String driver = prop.getProperty("driver");
             String url = prop.getProperty("url");
+/*
             String user = prop.getProperty("user");
-            String password = prop.getProperty("password");
+            String password = prop.getProperty("password");*/
 
             Class.forName(driver); // Driver Loading : JDBC 드라이버를 준비
 
@@ -36,7 +33,6 @@ public class JDBCTemplate {
                     prop
             );
 
-            System.out.println("커넥션 생성이 완료되었습니다.");
 
         } catch (ClassNotFoundException | SQLException | IOException e) {
             e.printStackTrace();

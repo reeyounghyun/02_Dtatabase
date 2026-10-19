@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="insertMenu">
+        insert into tbl_menu (
+        menu_name,
+        menu_price,
+        category_code,
+        orderable_status
+        ) values (
+        ?,
+        ?,
+        ?,
+        ?
+        )
+    </entry>
+
+    <entry key="findMenuByCode">
+        select
+        menu_code,
+        menu_name,
+        menu_price
+        from tbl_menu
+        where menu_code = ?
+    </entry>
+
+    <entry key="changeMenu">
+        update tbl_menu
+        set menu_name = ?,
+        menu_price = ?
+        where menu_code = ?
+    </entry>
+
+    <entry key="deleteMenu">
+        DELETE FROM tbl_menu
+        WHERE menu_code = ?
+    </entry>
+
+    <entry key="findMenuWithCategory">
+        SELECT a.menu_code, a.menu_name, a.menu_price, a.orderable_status,
+        b.category_name
+        FROM tbl_menu a
+        JOIN tbl_category b ON a.category_code = b.category_code
+        WHERE a.menu_code = ?
+    </entry>
+
+</properties>
