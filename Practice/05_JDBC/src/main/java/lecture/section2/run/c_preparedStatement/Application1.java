@@ -15,7 +15,7 @@ public class Application1 {
         String query = "select * from tbl_menu where menu_code = ?";
         try (
                 Connection con = getConnection(); // 1. 커넥션 만들기
-                PreparedStatement pstmt = con.prepareStatement(query); // 2. PreparedStatement 객체만들기
+                PreparedStatement pstmt = con.prepareStatement(query); // 2. PreparedStatement 객    체만들기
                 //ResultSet rset = null; // 3. 결과값을 준비
         ) {
 
