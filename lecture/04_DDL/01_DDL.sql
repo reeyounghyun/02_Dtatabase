@@ -1,9 +1,9 @@
--- DDl 데이터 정의어
--- 데이터베이스의 구조를 생성, 변경, 초기화, 삭제 할때 사용한다.
+-- DDL 데이터 정의어
+-- 데이터베이스의 구조를 생성, 변경, 초기화, 삭제할 때 사용한다.
 
 -- CREATE : 새로운 객체를 생성한다
 -- ALTER : 기존 객체의 구조를 변경
--- TRUNCATE : 테이블의 구조는 유지하고 모든행을 삭제
+-- TRUNCATE : 테이블의 구조는 유지하고 모든 행을 삭제
 -- DROP : 객체의 구조와 데이터를 모두 삭제
 
 # 1.테이블 생성
@@ -24,7 +24,7 @@ select * from tb1;
 
 
 -- tb2
--- auto_increment : 행을 추가할때 자동으로 번호를 생성해주는 기능
+-- auto_increment : 행을 추가할 때 자동으로 번호를 생성해주는 기능
 -- Primary Key 또는 Unique KEY가 설정된 컬럼에 사용
 create table if not exists tb2
 (
@@ -58,16 +58,16 @@ alter table tb2
 describe tb2; -- 구조 출력
 
 -- 컬럼 수정
--- 이름을 바꾸면서 데이터 타입, 제약조건 다시작성
+-- 이름을 바꾸면서 데이터 타입, 제약조건 다시 작성
 alter table tb2
-    -- change column 전부다 삭제
+    -- change column 전부 다 삭제
     -- [조건] 이름, 컬럼정의(데이터타입, 제약조건)
     change column fk change_fk BIGINT NOT NULL ;
 
 describe  tb2; -- 구조 출력
 
 
--- 이름은 변경하지 않고, 데이터 타입, 제약조건 다시작성
+-- 이름은 변경하지 않고, 데이터 타입, 제약조건 다시 작성
 alter table tb2
 modify column change_fk int ;
 
@@ -75,14 +75,14 @@ describe tb2; -- 구조 출력
 
 
 
--- 이름만 변경, 데이터 타입, 제약조건 다시작성
+-- 이름만 변경, 데이터 타입, 제약조건 다시 작성
 alter table tb2
     rename column change_fk to fk;
 
 describe tb2; -- 구조 출력
 
 
--- PRIMARY KRY 제약조건 삭제 및 추가
+-- PRIMARY KEY 제약조건 삭제 및 추가
 
 -- autoincrement 컬럼 : KEY로 추가가 되어있어야함.
 -- alter table tb2 drop primary key
@@ -153,7 +153,7 @@ drop table if exists tb3, tb4, tb5;
 
 -- Truncate
 -- 테이블 구조는 유지하면서 모든 행(데이터)는 전부 삭제한다.
--- Auto_Increment의 값도 초기화 된다.
+-- Auto_Increment의 값도 초기화된다.
 
 
 create table if not exists tb3
@@ -185,7 +185,7 @@ truncate table tb3;
 
 -- delete: 선택한 행 삭제 하기 위해 사용 /
 -- truncate - 테이블구조를 초기화해 행을 삭제하기 위해 사용 /
--- reop - 모든 행과 구조 삭제
+-- drop - 모든 행과 구조 삭제
 
 
 

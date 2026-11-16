@@ -5,8 +5,8 @@
 insert into tbl_menu
 values (null, '바나나해장국', 8500, 4, 'y');
 
--- null 값이 가능하거나 auto_increament가 있는 컬럼을 제외하고
--- insert 하고싶은 데이터컬럼을 지정해서 inser 할 수 있다.
+-- null 값이 가능하거나 auto_increment가 있는 컬럼을 제외하고
+-- insert 하고 싶은 데이터컬럼을 지정해서 insert 할 수 있다.
 
 insert into tbl_menu (menu_name, menu_price, category_code, orderable_status)
 values ('바나나해장국', 8500, 4, 'y');
@@ -44,7 +44,7 @@ limit  2;
 
 
 -- REPLACE
--- 데이터를 입력할때 중복된 데이터는 덮어 쓸수 있도록 허용해줌
+-- 데이터를 입력할 때 중복된 데이터는 덮어쓸 수 있도록 허용해줌
 
 REPLACE into tbl_menu
 values (1, '바나나해장국', 8500, 4, 'y');

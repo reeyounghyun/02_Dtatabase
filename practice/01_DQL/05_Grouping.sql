@@ -43,7 +43,7 @@ order by job_code asc;
 /* Q4)
 [조건]부서별 평균 급여가 300만원 이상인
 [데이터 추출]부서의 부서명, 직원 수, 평균 급여(소수점 이하 버림)를 조회하시오.
-[조건평균 급여를 기준으로 내림차순 정렬하시오.
+[조건] 평균 급여를 기준으로 내림차순 정렬하시오.
 (힌트: JOIN, GROUP BY, HAVING)
 */
 
@@ -54,7 +54,7 @@ order by job_code asc;
     from tbl_department a
 left join  tbl_employee b
     on a.dept_id = b.dept_code -- 부서코드가 같은 행끼리 연결
-    group by a.dept_id, a.dept_title -- 부셔별로 묶고
+    group by a.dept_id, a.dept_title -- 부서별로 묶고
     having  avg(b.salary) >= 3000000 -- 평균 급여가 300만원 이상인 부서
     order by avg(b.salary) desc ; -- 평균급여가 높은 부서부터 정렬해라.
 

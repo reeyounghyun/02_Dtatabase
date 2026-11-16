@@ -32,7 +32,7 @@ from tbl_menu
 where
     menu_price < 13000;
 
--- [조건] menu_price가 13000원인 아닌 메뉴 가격만 보여주세요
+-- [조건] menu_price가 13000원이 아닌 메뉴 가격만 보여주세요
 select
     menu_name,
     menu_price
@@ -73,7 +73,7 @@ select 1 or 0 and 0;
 -- OR연산이 먼저 수행하려면 괄호를 해주면 된다.
 SELECT (1 OR 0) AND 0;
 
--- [조건] 메뉴가격이 10000원 이상 25000원 이하 이고 menu 가격순으로 정렬해서 출력
+-- [조건] 메뉴가격이 10000원 이상 25000원 이하이고 menu 가격순으로 정렬해서 출력
 select
     menu_name,
     menu_price,
@@ -84,7 +84,7 @@ where menu_price >= 10000 and menu_price <= 25000
 order by menu_price;
 
 
--- [ 조건 between을 사용하여] 메뉴가격이 10000원 이상 25000원 이하 이고 menu 가격순으로 정렬해서 출력
+-- [ 조건 between을 사용하여] 메뉴가격이 10000원 이상 25000원 이하이고 menu 가격순으로 정렬해서 출력
 select
     menu_name,
     menu_price,
@@ -94,7 +94,7 @@ from
 where menu_price between 10000 and 25000
 order by menu_price;
 
--- [ 조건 / 부정표현 not not_between 을 사용하여] 메뉴가격이 10000원 이상 25000원 이하 이고 menu 가격순으로 정렬해서 출력
+-- [ 조건 / 부정표현 not not_between 을 사용하여] 메뉴가격이 10000원 이상 25000원 이하이고 menu 가격순으로 정렬해서 출력
 select
     menu_name,
     menu_price,
@@ -105,7 +105,7 @@ where menu_price not between 10000 and 25000
 order by menu_price;
 
 # 와일드 카드
--- LIKE 연산자 :특정 패턴과 일치하는 데이터를 검색알 때 사용
+-- LIKE 연산자 :특정 패턴과 일치하는 데이터를 검색할 때 사용
 
 -- _ 언더바 : 딱 한글자
 -- % : 글자수 제한 없음

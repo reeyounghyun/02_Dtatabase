@@ -13,7 +13,7 @@ select menu_code,
        orderable_status
 from tbl_menu
 where category_code = 4
-with check option;  -- viwe 입력, 수정을 행이 view의 wher 조건을 만족하도록 검사
+with check option;  -- view 입력, 수정을 행이 view의 where 조건을 만족하도록 검사
 
 select * from hansik;
 
@@ -36,7 +36,7 @@ where menu_code = 37;
 insert into hansik (menu_name, menu_price, category_code, orderable_status)
 values ('뷰확인용 닭칼국수 김밥', 5000, 4, 'Y');
 
--- with check option으로 view의 where절의 조건을 만족하지 못해 생성불가
+-- with check option으로 view의 where절의 조건을 만족하지 못해 생성 불가
 insert into hansik (menu_name, menu_price, category_code, orderable_status)
 values ('뷰확인용 닭칼국수 김밥', 5000, 4, 'Y');
 

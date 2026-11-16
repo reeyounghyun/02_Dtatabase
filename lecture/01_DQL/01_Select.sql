@@ -2,7 +2,7 @@
 --  * 은 모든 칼럼을 조회할 수 있다.
 -- SELECT : 테이블의 데이터를 조회할 때 사용
 -- select (조회할 칼럼) from (조회할테이블);
--- 에시) select menu_name from tbl_menu;
+-- 예시) select menu_name from tbl_menu;
 -- 기능 1.select  5+10; //연산이 가능하다.
 
 

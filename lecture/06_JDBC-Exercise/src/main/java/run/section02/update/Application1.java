@@ -43,9 +43,9 @@ public class Application1 {
             System.out.print("변경할 메뉴 번호: ");
             int menuCode = Integer.parseInt(sc.nextLine());
 
-            pstmt = con.prepareStatement(query);   // 45: SQL 준비
-            pstmt.setInt(1, menuCode);  // 46: 빈칸 채우기
-            rset = pstmt.executeQuery();  // 47: 실행
+            pstmt = con.prepareStatement(query);   // 1. SQL 준비
+            pstmt.setInt(1, menuCode);  // 2. 빈칸 채우기
+            rset = pstmt.executeQuery();  // 3. 실행
 
 
             if (rset.next()) {

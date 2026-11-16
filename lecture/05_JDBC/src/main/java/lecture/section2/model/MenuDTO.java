@@ -2,7 +2,7 @@ package lecture.section2.model;
 
 import lombok.*;
 
-// tbl_menu의 현행의 계층간 전달하기 위한 데이터 객체
+// tbl_menu의 한 행을 계층간 전달하기 위한 데이터 객체
 @Setter
 @Getter
 @AllArgsConstructor

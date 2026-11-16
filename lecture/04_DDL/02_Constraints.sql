@@ -1,9 +1,9 @@
 -- 제약 조건
--- 테이블에 잘못된 데이터가 저장되지 않돌고 컬럼에 규칙을 정한다.
+-- 테이블에 잘못된 데이터가 저장되지 않도록 컬럼에 규칙을 정한다.
 
 -- 컬럼레벨 정의 : 컬럼 선언 바로 뒤에 제약조건을 작성
 -- 테이블레벨 정의 : 모든 컬럼 선언 뒤에 제약조건 작성
--- 복합키나 제약조건 이름을 명시할때 테이블레벨 정의를 쓴다.
+-- 복합키나 제약조건 이름을 명시할 때 테이블레벨 정의를 쓴다.
 
 -- not null : null 저장 방지
 -- unique : 중복값 저장 방지
@@ -35,9 +35,9 @@ INSERT INTO user_notnull
 VALUES
     (3, 'user01', 'pass01', '홍길동', '남', '010-1234-5678', 'hong123@gmail.com');
 
--- foreing key (외래키)
+-- foreign key (외래키)
 -- 자식테이블의 foreign key에는 부모테이블에 존재하는 값만 저장 가능
--- 부모테이블의 참조 대상 컬럼은 primary kek 또는 unique key 이여야한다.
+-- 부모테이블의 참조 대상 컬럼은 primary key 또는 unique key 이어야한다.
 
 
 -- (grade_code)  참조할 키
@@ -86,7 +86,7 @@ where grade_code = 10;
 
 
 -- RESTRICT : 자식이 참조중이면 부모의 수정-삭제를 거부한다.
--- CASCADE : 부모의 변경을 자식에도 반영한다,
+-- CASCADE : 부모의 변경을 자식에도 반영한다.
 -- SET NULL : 부모가 수정, 삭제되면 자식의 외래키를 NULL 변경한다.
 
 create table user_fk_table
@@ -125,7 +125,7 @@ select * from user_fk_table;
 
 
 
--- 캐시캐이드
+-- 캐스케이드
 create table user_grade2
 (
     grade_code int primary key,

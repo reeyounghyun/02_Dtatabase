@@ -99,7 +99,7 @@ select
     e.emp_id,
     e.emp_name,
     m.emp_name as 관리자명
-from tbl_employee e -- 직원 정보를 조회하는 역활 -> e
-left join  tbl_employee m -- 관리자 정보를 조회하는 역활 -> m
+from tbl_employee e -- 직원 정보를 조회하는 역할 -> e
+left join  tbl_employee m -- 관리자 정보를 조회하는 역할 -> m
 on e.manager_id = m.emp_id -- 직원의 관리자사번과 관리자의 사번을 비교
 order by  e.emp_id -- 직원 사번 기준 오름차순

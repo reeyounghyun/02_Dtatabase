@@ -1,6 +1,6 @@
--- GRPUP BY
+-- GROUP BY
 -- 같은 값을 가진 행을 하나의 그룹으로 묶을 때
--- 통계, 집게를 계상할때 사용
+-- 통계, 집계를 계산할 때 사용
 
 select
     category_code,
@@ -17,8 +17,8 @@ from tbl_menu
 group by  category_code;
 
 
--- HAVING: 그룹한 이 이후에 결과를 필터링
--- WHERE: 그룹화를 하기전에 데이터를 필터링
+-- HAVING: 그룹화 이후에 결과를 필터링
+-- WHERE: 그룹화를 하기 전에 데이터를 필터링
 
 # [조건]
 select
@@ -27,7 +27,7 @@ select
 from tbl_menu
 group by category_code
 having category_code between 5 and 8;
--- 그룸핑 이후에 having
+-- 그룹핑 이후에 having
 
 
 -- ROLLUP

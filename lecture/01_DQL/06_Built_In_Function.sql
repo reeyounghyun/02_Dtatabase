@@ -116,7 +116,7 @@ SELECT
     SUBSTRING('안녕하세요 반갑습니다.', 7);
 
 -- SUBSTRING_INDEX(문자열, 구분자, 횟수)
--- SUBSTRING_INDEX: 구분자가 왼쪽부터 횟수 번쨰 나오면 그 이후의 오른쪽은 버린다.
+-- SUBSTRING_INDEX: 구분자가 왼쪽부터 횟수 번째 나오면 그 이후의 오른쪽은 버린다.
 -- 횟수가 음수일 경우 오른쪽부터 세고 왼쪽을 버린다.
 SELECT
     SUBSTRING_INDEX('hong.test@gmail.com', '.', 2),
@@ -149,7 +149,7 @@ SELECT POW(2, 4), SQRT(16);
 -- RAND()
 -- RAND: 0이상 1 미만의 실수를 구한다.
 -- 'm <= 임의의 정수 < n'을 구하고 싶다면
--- FLOOR((RAND() * (n - m) + m)을 사용한다.
+-- FLOOR(RAND() * (n - m) + m)을 사용한다.
 -- 1부터 10까지 난수 발생: FLOOR(RAND() * (11 - 1) + 1)
 SELECT RAND(), FLOOR(RAND() * (11 - 1) + 1);
 
@@ -164,7 +164,7 @@ SELECT TRUNCATE(12345.12345, 2), TRUNCATE(12345.12345, -2);
 -- 3. 날짜 및 시간 관련 함수
 -- ADDDATE(날짜, 차이), SUBDATE(날짜, 차이)
 -- ADDDATE: 날짜를 기준으로 차이를 더함
--- SUBDATE: 날짜를 기준으로 날짜를 뺌
+-- SUBDATE: 날짜를 기준으로 차이를 뺌
 SELECT
     ADDDATE('2023-05-31', INTERVAL 30 DAY),
     ADDDATE('2023-05-31', INTERVAL 6 MONTH);
@@ -214,7 +214,7 @@ SELECT
 -- TIME: 시:분:초만 추출
 SELECT DATE(NOW()), TIME(NOW());
 
--- DATEDIFF(날짜1, 날짜2), TIMEDIFF(날짜1 또는 시간1, 날짜1 또는 시간2)
+-- DATEDIFF(날짜1, 날짜2), TIMEDIFF(날짜1 또는 시간1, 날짜2 또는 시간2)
 -- DATEDIFF: 날짜1 - 날짜2의 일수를 반환
 -- TIMEDIFF: 시간1 - 시간2의 결과를 구함
 SELECT
@@ -243,7 +243,7 @@ SELECT MAKEDATE(2023, 32);
 SELECT MAKETIME(17, 03, 02);
 
 -- PERIOD_ADD(연월, 개월 수), PERIOD_DIFF(연월1, 연월2)
--- PERIOD_ADD: 열월에서 개월 수 이후의 연월을 구한다.(연월은 YYYY 또는 YYYYMM형식을 사용한다.)
+-- PERIOD_ADD: 연월에서 개월 수 이후의 연월을 구한다.(연월은 YYYY 또는 YYYYMM형식을 사용한다.)
 -- PERIOD_DIFF: 연월1 - 연월2의 개월 수를 구한다.
 SELECT
     PERIOD_ADD(202305, 6),

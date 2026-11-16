@@ -22,9 +22,9 @@ public class Application2 {
         Connection con = JDBCTemplate.getConnection(); // 1. 커넥션 생성
 
         // Statement : 완성된 SQL 문자열을 실행
-        Statement stmt = null;  // 2. Statment 생성 (쿼리실행용)
+        Statement stmt = null;  // 2. Statement 생성 (쿼리실행용)
 
-        // ResultSet : SQL의 결과를 행단위로 읽음
+        // ResultSet : SQL의 결과를 행 단위로 읽음
         ResultSet rset = null; // 3. ResultSet 생성 (결과받을용)
 
 

@@ -14,7 +14,7 @@ public class Application1 {
         // 완성된 SQL 문자열을 실행
 //        Statement stmt = null;
 
-        // SQL의 결과를 행단위로 읽음
+        // SQL의 결과를 행 단위로 읽음
 //        ResultSet rset = null;
 
         try {

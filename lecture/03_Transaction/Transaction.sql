@@ -27,5 +27,5 @@ from
 where menu_code = 5; -- 트랜잭션 안에서는 수정된 메뉴
 
 
-commit; -- transaction 수정하면 데이터 베이스에 반영이 됨
-rollback; -- 아직 comit 되지 않은 사항을 취소한다.
+commit; -- transaction 수정하면 데이터베이스에 반영이 됨
+rollback; -- 아직 commit 되지 않은 사항을 취소한다.
