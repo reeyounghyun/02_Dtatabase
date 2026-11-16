@@ -1,4 +1,4 @@
-package run.section04.selsct;
+package run.section04.select;
 
 import model.dto.MenuCategory;
 import model.dto.MenuDTO3;
@@ -42,14 +42,14 @@ public class Application1 {
                     new FileInputStream("src/main/java/mapper/menu_query.xml")
             );
 
-            // 변경할 메뉴 정보를 알기위해 조회
+            // 조회할 메뉴 정보를 알기위해 조회
             String query = prop.getProperty("findMenuWithCategory");  // 메뉴 조회
             System.out.print("조회할 메뉴 번호: ");
             int menuCode = Integer.parseInt(sc.nextLine());
 
-            pstmt = con.prepareStatement(query);   // 45: SQL 준비
-            pstmt.setInt(1, menuCode);  // 46: 빈칸 채우기
-            rset = pstmt.executeQuery();  // 47: 실행
+            pstmt = con.prepareStatement(query);   // SQL 준비
+            pstmt.setInt(1, menuCode);  // 빈칸 채우기
+            rset = pstmt.executeQuery();  // 실행
 
 
             if (rset.next()) {

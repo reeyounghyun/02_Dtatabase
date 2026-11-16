@@ -1,4 +1,4 @@
-package lecture.section2.run.b_sqlInjextion;
+package lecture.section2.run.b_sqlInjection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,16 +15,16 @@ public class Application1 {
 
     public static void main(String[] args) {
         /*
-         * 1. 커넥스 생성
+         * 1. 커넥션 생성
          *
          * 2. Statement 생성
          * 3. ResultSet 생성
          * 4. 쿼리 작성(menu name과 주문가능여부를 확인하는 쿼리)
-         * 5. Strtemnt를 이용해서 쿼리 실행
+         * 5. Statement를 이용해서 쿼리 실행
          * 6. ResultSet을 이용해서 결과 읽기
          * */
 
-        // 1. 커넥스 생성
+        // 1. 커넥션 생성
         Connection con = getConnection();
 
         // 2. Statement 생성
@@ -42,7 +42,7 @@ public class Application1 {
         // query 출력 (중간점검)
         System.out.println(query);
 
-        // 5. Strtemnt를 이용해서 쿼리 실행
+        // 5. Statement를 이용해서 쿼리 실행
         try {
             stmt = con.createStatement();  // Connection으로
             rest = stmt.executeQuery(query);

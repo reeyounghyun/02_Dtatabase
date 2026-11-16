@@ -15,10 +15,10 @@ public class JDBCTemplate {
         Properties prop = new Properties();
 
         try {
-            // 파일을 읽어오는것!
-            // properties.load() : 읽어온 파일을 key value로 분리해서저장
+            // 파일을 읽어오는 것!
+            // properties.load() : 읽어온 파일을 key value로 분리해서 저장
             prop.load(new FileReader(
-                    "src/main/java/lecture/section2/comfig/db.properties"));
+                    "src/main/java/lecture/section2/config/db.properties"));
 
 
             System.out.println("설정 파일을 읽어왔습니다...");
@@ -30,7 +30,7 @@ public class JDBCTemplate {
 
             Class.forName(driver); // Driver Loading : JDBC 드라이버를 준비
 
-            // 커넥션 생성 : DB 접근 권한을 가지게됨.
+            // 커넥션 생성 : DB 접근 권한을 가지게 됨.
             con = DriverManager.getConnection(
                     url,
                     prop

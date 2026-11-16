@@ -1,4 +1,4 @@
-//package lecture.section2.run.b_sqlInjextion;
+//package lecture.section2.run.b_sqlInjection;
 //
 //import lecture.section2.common.JDBCTemplate;
 //
@@ -6,7 +6,7 @@
 //import java.sql.SQLException;
 //
 //
-//public class Text {
+//public class Test {
 //    public static void main(String[] args) {
 //        Connection con = JDBCTemplate.getConnection();
 //        try (con) {

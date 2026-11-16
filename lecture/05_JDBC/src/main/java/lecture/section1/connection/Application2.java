@@ -25,7 +25,7 @@ public class Application2 {
         try {
             // 외부 설정 파일 읽어오기
             prop.load(new FileReader(
-                    "src/main/java/lecture/section2/comfig/db.properties"));
+                    "src/main/java/lecture/section2/config/db.properties"));
 
             // 출력
             System.out.println("prop = " + prop);
