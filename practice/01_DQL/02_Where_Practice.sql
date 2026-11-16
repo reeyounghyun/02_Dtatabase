@@ -140,11 +140,11 @@ tbl_employee 테이블에서 보너스를 받는 직원들의 직급코드를 �
 */
 
 select distinct
-    dept_code -- 보너스를 받는 직원들의 "직급코드"
+    job_code -- 보너스를 받는 직원들의 "직급코드"
 from tbl_employee
-where bonus is null  -- "null값이 아닌 값만 추출" = 보너스를 받은사람
+where bonus is not null  -- "null값이 아닌 값만 추출" = 보너스를 받은 사람
 order by
-    dept_code asc; -- 오름차순
+    job_code asc; -- 오름차순
 
 
 
